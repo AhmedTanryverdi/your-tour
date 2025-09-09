@@ -3,9 +3,16 @@ import gulpSass from "gulp-sass";
 import browserSync from "browser-sync";
 import * as dart from "sass";
 import { deleteAsync } from "del";
+import fileInclude from "gulp-file-include";
 
-async function html() {
+async function htmlCopy() {
 	return src("./src/**/*.html").pipe(dest("./dist"));
+}
+
+function htmlTask() {
+	return src("./src/**/*.html")
+		.pipe(fileInclude())
+		.pipe(dest("./dist/"));
 }
 
 const sass = gulpSass(dart);
@@ -39,10 +46,10 @@ function reload(done) {
 }
 
 function watcher() {
-	watch("./src/**/*.html", html);
-	watch("./src/**/*.scss", html);
+	watch("./src/**/*.html", htmlCopy);
+	watch("./src/**/*.scss", scss);
 	watch("./dist/**/*", reload);
 }
 
-const build = series(cleanDist, favicon, html, scss);
+const build = series(cleanDist, favicon, htmlCopy, htmlTask, scss);
 export default series(build, serve, watcher);
