@@ -10,9 +10,7 @@ async function htmlCopy() {
 }
 
 function htmlTask() {
-	return src("./src/**/*.html")
-		.pipe(fileInclude())
-		.pipe(dest("./dist/"));
+	return src("./src/**/*.html").pipe(fileInclude()).pipe(dest("./dist/"));
 }
 
 const sass = gulpSass(dart);
@@ -47,6 +45,7 @@ function reload(done) {
 
 function watcher() {
 	watch("./src/**/*.html", htmlCopy);
+	watch("./src/**/*.html", htmlTask);
 	watch("./src/**/*.scss", scss);
 	watch("./dist/**/*", reload);
 }
