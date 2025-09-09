@@ -1,8 +1,17 @@
+@import "./scss/mixins";
+
 @import "./scss/header";
 @import "./scss/main";
 @import "./scss/footer";
 
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 .root {
 	width: 100%;
 	min-height: 100vh;
+	@include flex-between(column);
 }
