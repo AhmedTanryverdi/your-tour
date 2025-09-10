@@ -1,5 +1,6 @@
 @use '../../scss/mixins' as m;
 @use '../../scss/variables' as v;
+
 .footer {
   .footer-social {
     width: 100%;
@@ -15,7 +16,7 @@
     }
 
     &__title {
-      color: v.$footer-links-color;
+      color: v.$footer-title-color;
       @include m.font-roboto;
     }
 
@@ -44,6 +45,49 @@
             text-decoration: underline;
             text-underline-offset: 2px;
           }
+        }
+      }
+    }
+  }
+
+  .footer-hero {
+    @include m.flex-center;
+    padding: 135px 0;
+
+    &__content {
+      max-width: 771px;
+      width: 100%;
+      min-height: 370px;
+      @include m.flex-center;
+      column-gap: 30px;
+    }
+
+    &__image {
+      max-width: 370px;
+      width: 100%;
+      min-height: 370px;
+      border-radius: 50px;
+    }
+
+    &__banner {
+      max-width: 371px;
+      width: 100%;
+
+      &_title {
+        color: v.$secondary-color;
+        @include m.font-roboto(35px, 500);
+        line-height: 122%;
+        text-align: left;
+      }
+
+      &_subtitle {
+        @include m.font-roboto;
+        color: v.$footer-title-color;
+        text-align: left;
+        margin-top: 20px;
+
+        .email {
+          color: v.$secondary-color;
         }
       }
     }
