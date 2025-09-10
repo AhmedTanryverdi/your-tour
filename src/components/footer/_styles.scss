@@ -1,41 +1,43 @@
+@use '../../scss/mixins' as m;
+@use '../../scss/variables' as v;
 .footer {
   .footer-social {
     width: 100%;
     height: 88px;
-    background: $footer-bg-color;
-    @include flex-center;
+    background: v.$footer-bg-color;
+    @include m.flex-center;
 
     &__content {
       max-width: 1186px;
       width: 100%;
       height: 28px;
-      @include flex-between;
+      @include m.flex-between;
     }
 
     &__title {
-      color: $footer-links-color;
-      @include font-roboto;
+      color: v.$footer-links-color;
+      @include m.font-roboto;
     }
 
     &__links {
       list-style: none;
-      @include flex-center;
+      @include m.flex-center;
       column-gap: 25px;
 
       &_item {
-        @include flex-between;
+        @include m.flex-between;
         column-gap: 10px;
         .links__icon {
           width: 26px;
           height: 26px;
           cursor: pointer;
-          @include flex-center;
+          @include m.flex-center;
         }
 
         .links__name {
-          @include flex-center;
-          color: $secondary-color;
-          @include font-roboto;
+          @include m.flex-center;
+          color: v.$secondary-color;
+          @include m.font-roboto;
 
           &:hover {
             cursor: pointer;

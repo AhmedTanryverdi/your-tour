@@ -1,9 +1,9 @@
-@import './scss/mixins';
-@import './scss/variables';
-@import './scss/header';
-@import './scss/main';
-@import './scss/footer';
-@import './components/footer/styles';
+@use './scss/mixins' as m;
+@use './scss/variables';
+@use './scss/header';
+@use './scss/main';
+@use './scss/footer';
+@use './components/footer/styles';
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,7 @@
 .root {
   width: 100%;
   min-height: 100vh;
-  @include flex-between(column);
+  @include m.flex-between(column);
 }
 
 .container {

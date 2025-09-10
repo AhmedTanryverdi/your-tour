@@ -1,6 +1,8 @@
+@use '../scss/variables' as g;
+
 .header {
   width: 100%;
   height: 830px;
-  background-image: url($header-bg-path);
+  background-image: url(g.$header-bg-path);
   background-size: 100% 100%;
 }
