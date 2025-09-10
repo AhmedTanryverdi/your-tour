@@ -4,7 +4,9 @@ import browserSync from 'browser-sync';
 import { deleteAsync } from 'del';
 import fileInclude from 'gulp-file-include';
 import pretty from 'gulp-prettier';
-import * as dart from 'sass';
+import * as dartSass from 'sass';
+
+const sass = gulpSass(dartSass);
 
 async function htmlCopy() {
   return src('./src/**/*.html').pipe(dest('./dist'));
@@ -14,7 +16,6 @@ function htmlTask() {
   return src('./src/**/*.html').pipe(fileInclude()).pipe(dest('./dist/'));
 }
 
-const sass = gulpSass(dart);
 function scss() {
   return src('./src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
