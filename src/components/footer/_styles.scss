@@ -5,7 +5,7 @@
   .footer-social {
     width: 100%;
     height: 88px;
-    background: v.$footer-bg-color;
+    background: v.$beige200-color;
     @include m.flex-center;
 
     &__content {
@@ -16,7 +16,7 @@
     }
 
     &__title {
-      color: v.$footer-title-color;
+      color: v.$grey300-color;
       @include m.font-roboto;
     }
 
@@ -37,7 +37,7 @@
 
         .links__name {
           @include m.flex-center;
-          color: v.$secondary-color;
+          color: v.$black-color;
           @include m.font-roboto;
 
           &:hover {
@@ -74,7 +74,7 @@
       width: 100%;
 
       &_title {
-        color: v.$secondary-color;
+        color: v.$black-color;
         @include m.font-roboto(35px, 500);
         line-height: 122%;
         text-align: left;
@@ -82,12 +82,12 @@
 
       &_subtitle {
         @include m.font-roboto;
-        color: v.$footer-title-color;
+        color: v.$grey300-color;
         text-align: left;
         margin-top: 20px;
 
         .email {
-          color: v.$secondary-color;
+          color: v.$black-color;
         }
       }
     }
