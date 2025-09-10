@@ -1,6 +1,22 @@
 @mixin flex-between($dir: row) {
-	display: flex;
-	flex-direction: $dir;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  flex-direction: $dir;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font-roboto($size: 20px, $weight: 400) {
+  font-family: 'Roboto';
+  font-weight: $weight;
+  font-size: $size;
+  line-height: 142%;
+  letter-spacing: 0%;
+  text-align: center;
 }
