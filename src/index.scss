@@ -1,22 +1,23 @@
-@import "./scss/mixins";
-
-@import "./scss/header";
-@import "./scss/main";
-@import "./scss/footer";
+@import './scss/mixins';
+@import './scss/variables';
+@import './scss/header';
+@import './scss/main';
+@import './scss/footer';
+@import './components/footer/styles';
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .root {
-	width: 100%;
-	min-height: 100vh;
-	@include flex-between(column);
+  width: 100%;
+  min-height: 100vh;
+  @include flex-between(column);
 }
 
 .container {
-	max-width: 1920px;
-	width: 100%;
+  max-width: 1920px;
+  width: 100%;
 }
