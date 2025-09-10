@@ -1,10 +1,10 @@
 import { src, dest, series, watch } from 'gulp';
 import gulpSass from 'gulp-sass';
 import browserSync from 'browser-sync';
-import * as dart from 'sass';
 import { deleteAsync } from 'del';
 import fileInclude from 'gulp-file-include';
 import pretty from 'gulp-prettier';
+import * as dart from 'sass';
 
 async function htmlCopy() {
   return src('./src/**/*.html').pipe(dest('./dist'));
@@ -22,10 +22,17 @@ function scss() {
     .pipe(browserSync.stream());
 }
 
-export const formatFiles = () =>
-  src(['./src/**/*.{css,html}', '!./src/**/_*.{css,html}'])
+function formatFiles() {
+  return src(['./src/**/*.{css,html}', '!./src/**/_*.{css,html}'])
     .pipe(pretty())
     .pipe(dest('./src'));
+}
+
+function copyImages() {
+  return src(['./src/assets/**/*.{png,jpg,jpeg,gif,webp,svg}'], {
+    encoding: false,
+  }).pipe(dest('./dist/assets'));
+}
 
 function favicon() {
   return src('./public/favicon.svg').pipe(dest('./dist'));
@@ -56,5 +63,13 @@ function watcher() {
   watch('./dist/**/*', reload);
 }
 
-const build = series(cleanDist, favicon, htmlCopy, htmlTask, scss, formatFiles);
+const build = series(
+  cleanDist,
+  favicon,
+  copyImages,
+  htmlCopy,
+  htmlTask,
+  scss,
+  formatFiles,
+);
 export default series(build, serve, watcher);
