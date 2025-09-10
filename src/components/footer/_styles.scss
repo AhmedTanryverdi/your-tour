@@ -1,0 +1,49 @@
+.footer {
+  .footer-social {
+    width: 100%;
+    height: 88px;
+    background: $footer-bg-color;
+    @include flex-center;
+
+    &__content {
+      max-width: 1186px;
+      width: 100%;
+      height: 28px;
+      @include flex-between;
+    }
+
+    &__title {
+      color: $footer-links-color;
+      @include font-roboto;
+    }
+
+    &__links {
+      list-style: none;
+      @include flex-center;
+      column-gap: 25px;
+
+      &_item {
+        @include flex-between;
+        column-gap: 10px;
+        .links__icon {
+          width: 26px;
+          height: 26px;
+          cursor: pointer;
+          @include flex-center;
+        }
+
+        .links__name {
+          @include flex-center;
+          color: $secondary-color;
+          @include font-roboto;
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+          }
+        }
+      }
+    }
+  }
+}
