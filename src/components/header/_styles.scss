@@ -1,0 +1,67 @@
+@use '../../scss/mixins' as m;
+@use '../../scss/variables' as v;
+
+.header {
+  .navbar {
+    height: 88px;
+    @include m.flex-center;
+
+    &__content {
+      max-width: 1168px;
+      height: 30px;
+      @include m.flex-between;
+      column-gap: 181px;
+    }
+
+    &__menu {
+      @include m.flex-between;
+      column-gap: 50px;
+
+      &_item {
+        @include m.font-roboto;
+        color: v.$primary-color;
+        text-decoration: transparent;
+        transition: 0.3s;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+      }
+    }
+    &__phone {
+      &_number {
+        @include m.font-roboto;
+        color: v.$primary-color;
+      }
+    }
+  }
+
+  .banner {
+    height: 742px;
+    @include m.flex-center;
+
+    &__content {
+      @include m.flex-center(column);
+      justify-content: center;
+      row-gap: 50px;
+    }
+
+    &__title {
+      max-width: 768px;
+      width: 100%;
+      color: v.$primary-color;
+      @include m.font-roboto(96px, 700);
+      line-height: 109%;
+      letter-spacing: 2%;
+    }
+
+    &__subtitle {
+      max-width: 562px;
+      width: 100%;
+      @include m.font-roboto;
+      color: v.$primary-color;
+    }
+  }
+}
