@@ -19,7 +19,7 @@
 
       &_item {
         @include m.font-roboto;
-        color: v.$primary-color;
+        color: v.$white-color;
         text-decoration: transparent;
         transition: 0.3s;
 
@@ -33,7 +33,7 @@
     &__phone {
       &_number {
         @include m.font-roboto;
-        color: v.$primary-color;
+        color: v.$white-color;
       }
     }
   }
@@ -51,7 +51,7 @@
     &__title {
       max-width: 768px;
       width: 100%;
-      color: v.$primary-color;
+      color: v.$white-color;
       @include m.font-roboto(96px, 700);
       line-height: 109%;
       letter-spacing: 2%;
@@ -61,7 +61,20 @@
       max-width: 562px;
       width: 100%;
       @include m.font-roboto;
-      color: v.$primary-color;
+      color: v.$white-color;
+    }
+
+    &__btn {
+      max-width: 118px;
+      width: 100%;
+
+      &_btn {
+        width: 100%;
+        height: 34px;
+        border-radius: 10px;
+        @include m.font-roboto(17px);
+        color: v.$black-color;
+      }
     }
   }
 }
