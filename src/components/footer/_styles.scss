@@ -75,7 +75,7 @@
 
       &_title {
         color: v.$black-color;
-        @include m.font-roboto(35px, 500);
+        @include m.font-roboto(2.1875rem, 500);
         line-height: 122%;
         text-align: left;
       }

@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-@mixin font-roboto($size: 20px, $weight: 400) {
+@mixin font-roboto($size: 1.25rem, $weight: 400) {
   font-family: 'Roboto';
   font-weight: $weight;
   font-size: $size;
