@@ -10,6 +10,32 @@
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../public/Roboto-Italic-VariableFont_wdth,wght.ttf')
+    format('typetrue');
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../public/Roboto-VariableFont_wdth,wght.ttf') format('typetrue');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+}
+
 .root {
   width: 100%;
   min-height: 100vh;
