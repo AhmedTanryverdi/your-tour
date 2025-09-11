@@ -1,0 +1,85 @@
+@use '../../../../scss/mixins' as m;
+@use '../../../../scss/variables' as v;
+
+.feed-back {
+  width: 100%;
+
+  &__content {
+    max-width: 1170px;
+    width: 100%;
+    margin: 135px auto;
+  }
+
+  &__title {
+    max-width: 528px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+
+    &_value {
+      @include m.font-roboto(3.6875rem, 700);
+      color: v.$black-color;
+      line-height: 124%;
+    }
+
+    &_subtitle {
+      @include m.font-roboto;
+      color: v.$grey300-color;
+      margin-top: 30px;
+    }
+  }
+
+  &__cards {
+    @include m.flex-center;
+    column-gap: 30px;
+    margin-top: 100px;
+
+    &_item {
+      max-width: 570px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 50px;
+      background-color: v.$beige200-color;
+      height: 673px;
+      @include m.flex-between(column);
+      align-items: flex-start;
+
+      .cards__review {
+        @include m.font-roboto(1.4375rem, 700);
+        line-height: 122%;
+        color: #000;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
+      .cards__label {
+        width: 100%;
+        height: 75px;
+        @include m.flex-between;
+
+        &_data {
+          .name {
+            @include m.font-roboto(2.1875rem, 500);
+            color: v.$black-color;
+            line-height: 122%;
+            text-align: left;
+          }
+
+          .value {
+            @include m.font-roboto(1.0625);
+            color: v.$grey300-color;
+            margin-top: 8px;
+          }
+        }
+
+        &_image {
+          width: 75px;
+          height: 75px;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}
