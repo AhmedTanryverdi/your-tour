@@ -1,0 +1,119 @@
+@use '../../../../scss/mixins' as m;
+@use '../../../../scss/variables' as v;
+
+.home {
+  width: 100%;
+  @include m.flex-center;
+
+  &__content {
+    max-width: 1170px;
+    width: 100%;
+    margin-top: 135px;
+  }
+
+  &__navigation {
+    text-align: center;
+    .navigation__title {
+      @include m.font-roboto(3.6875rem, 700);
+      color: v.$black-color;
+      line-height: 124%;
+    }
+
+    .navigation__menu {
+      @include m.flex-center;
+      column-gap: 30px;
+      margin-top: 35px;
+
+      &_item {
+        @include m.font-roboto(1.4375rem, 700);
+        color: v.$black-color;
+        line-height: 122%;
+        text-decoration: transparent;
+        transition: 0.3s;
+
+        &:hover {
+          text-decoration: underline;
+          text-underline-offset: 2px;
+          color: v.$orange200-color;
+        }
+      }
+    }
+  }
+
+  &__tour {
+    margin-top: 100px;
+    @include m.flex-center;
+    flex-wrap: wrap;
+    gap: 30px;
+    .t-1 {
+      background-image: url('./assets/images/tour/tour-1.png');
+    }
+    .t-2 {
+      background-image: url('./assets/images/tour/tour-2.png');
+    }
+    .t-3 {
+      background-image: url('./assets/images/tour/tour-3.png');
+    }
+    .t-4 {
+      background-image: url('./assets/images/tour/tour-4.png');
+    }
+    .t-5 {
+      background-image: url('./assets/images/tour/tour-5.png');
+    }
+    .t-6 {
+      background-image: url('./assets/images/tour/tour-6.png');
+    }
+    .tour__card {
+      max-width: 370px;
+      width: 100%;
+      height: 531px;
+      border-radius: 50px;
+      padding: 50px;
+      text-align: left;
+      position: relative;
+      background-size: 100% 100%;
+
+      &:hover {
+        cursor: pointer;
+        .tour__card_btn {
+          height: 42px;
+          background-color: v.$green400-color;
+          border-radius: 50px;
+        }
+      }
+
+      &_title {
+        max-width: 200px;
+        width: 100%;
+        @include m.font-roboto(2.1875rem, 500);
+        line-height: 122%;
+        color: v.$white-color;
+        text-align: left;
+      }
+
+      &_price {
+        @include m.font-roboto(1.0625rem, 400);
+        color: v.$white-color;
+        text-align: left;
+        margin-top: 16px;
+      }
+
+      &_btn {
+        max-width: 199px;
+        width: 100%;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        @include m.font-roboto(1.4375rem, 700);
+        line-height: 122%;
+        color: v.$white-color;
+        position: absolute;
+        left: 30px;
+        bottom: 50px;
+        padding: 7px 20px;
+        transition: 0.5s;
+        background-color: transparent;
+      }
+    }
+  }
+}
