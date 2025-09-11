@@ -1,0 +1,126 @@
+<section class="tour-form">
+  <div class="tour-form__content">
+    <div class="tour-form__title">
+      <h2 class="title__value">Собери свой тур</h2>
+      <p class="title__subtitle">
+        Идейные соображения высшего порядка,а также рамки и
+        место обучения кадров
+      </p>
+    </div>
+    <form class="tour-form__form" action="#">
+      <div class="form__info">
+        <label for="use-name" class="form__info_label">
+          <p class="form__info_name">Имя</p>
+          <input
+            type="text"
+            id="use-name"
+            name="use-name"
+            placeholder="Введите Ваше имя"
+          />
+        </label>
+        <label for="direction" class="form__info_label">
+          <p class="form__info_name">Направление</p>
+          <input
+            type="text"
+            id="direction"
+            name="direction"
+            placeholder="Куда хотите ехать"
+          />
+        </label>
+        <label for="email" class="form__info_label">
+          <p class="form__info_name">Email</p>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="example@mail.com"
+          />
+        </label>
+        <label for="phone" class="form__info_label">
+          <p class="form__info_name">Телефон</p>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+          />
+        </label>
+        <label for="date-from" class="form__info_label">
+          <p class="form__info_name">Дата от</p>
+          <input
+            type="date"
+            id="date-from"
+            name="date-from"
+            placeholder="ДД.ММ.ГГГГ"
+          />
+        </label>
+        <label for="date-to" class="form__info_label">
+          <p class="form__info_name">Дата до</p>
+          <input
+            type="date"
+            id="date-to"
+            name="date-to"
+            placeholder="ДД.ММ.ГГГГ"
+          />
+        </label>
+      </div>
+
+      <div class="form__comment">
+        <label for="comment__value" class="comment__label">
+          <p class="comment__label_item">Комментарий</p>
+          <textarea
+            name="comment__value"
+            id="comment__value"
+          ></textarea>
+        </label>
+      </div>
+
+      <div class="form__filter">
+        <p class="form__filter_label">Вам есть 18 лет?</p>
+        <div class="filter__radio">
+          <label
+            for="radio__value_yes"
+            class="radio__value"
+          >
+            <input
+              type="radio"
+              id="radio__value_yes"
+              name="radio__value"
+            />
+            <span>Да</span>
+          </label>
+
+          <label for="radio__value_no" class="radio__value">
+            <input
+              type="radio"
+              id="radio__value_no"
+              name="radio__value"
+            />
+            <span>Нет</span>
+          </label>
+        </div>
+
+        <div class="filter__checkbox">
+          <label
+            for="checkbox"
+            class="filter__checkbox_label"
+          >
+            <input type="checkbox" id="checkbox" />
+            <p>
+              <span class="checkbox__span_first">
+                Нажимая кнопку, я принимаю условия
+              </span>
+              <span class="checkbox__span_second">
+                Лицензионного договора
+              </span>
+            </p>
+          </label>
+        </div>
+      </div>
+      <div class="form__btns">
+        <button class="btns__find btn">Найти тур</button>
+        <button class="btns__reset btn">Сбросить</button>
+      </div>
+    </form>
+  </div>
+</section>

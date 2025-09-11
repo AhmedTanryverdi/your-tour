@@ -1,0 +1,175 @@
+@use '../../../../scss/mixins' as m;
+@use '../../../../scss/variables' as v;
+
+.tour-form {
+  @include m.flex-center;
+  &__content {
+    max-width: 1170px;
+    width: 100%;
+    margin-top: 135px;
+  }
+
+  &__title {
+    text-align: center;
+
+    .title__value {
+      @include m.font-roboto(3.6875rem, 700);
+      color: v.$black-color;
+      line-height: 124%;
+    }
+
+    .title__subtitle {
+      @include m.font-roboto;
+      color: v.$grey300-color;
+      max-width: 418px;
+      height: 56px;
+      margin: 30px auto;
+    }
+  }
+
+  &__form {
+    padding: 70px;
+    background-color: v.$white-color;
+
+    .form__info {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 33px 30px;
+
+      &_name {
+        @include m.font-roboto;
+        color: v.$black-color;
+        text-align: left;
+      }
+
+      &_label {
+        max-width: 500px;
+        width: 100%;
+        input {
+          width: 100%;
+          height: 68px;
+          background-color: v.$beige100-color;
+          outline: none;
+          border-radius: 10px;
+          border: 1px;
+          padding: 20px;
+          margin-top: 8px;
+          font-size: 20px;
+        }
+
+        input::placeholder,
+        input[type='date'] {
+          @include m.font-roboto;
+          color: v.$grey300-color;
+          text-align: left;
+        }
+      }
+    }
+
+    .form__comment {
+      width: 100%;
+      margin-top: 33px;
+
+      .comment__label {
+        width: 100%;
+
+        &_item {
+          @include m.font-roboto;
+          text-align: left;
+          color: v.$black-color;
+        }
+
+        #comment__value {
+          width: 100%;
+          height: 152px;
+          margin-top: 8px;
+          border: 1px;
+          border-radius: 10px;
+          font-size: 20px;
+          background-color: v.$beige100-color;
+          padding: 20px;
+          outline: none;
+        }
+      }
+    }
+
+    .form__filter {
+      &_label {
+        margin-top: 33px;
+        @include m.font-roboto;
+        color: v.$black-color;
+        text-align: left;
+      }
+
+      .filter__radio {
+        @include m.flex-center;
+        justify-content: flex-start;
+        column-gap: 31px;
+        margin-top: 9px;
+
+        .radio__value {
+          span {
+            display: inline-block;
+            @include m.font-roboto;
+            color: v.$black-color;
+            margin-left: 11px;
+          }
+        }
+      }
+
+      .filter__checkbox {
+        margin-top: 34px;
+
+        input[type='checkbox'] {
+          width: 26px;
+          height: 26px;
+          accent-color: transparent;
+        }
+
+        &_label {
+          @include m.flex-center;
+          justify-content: flex-start;
+          column-gap: 19px;
+
+          span {
+            @include m.font-roboto(1.0625rem);
+          }
+        }
+
+        .checkbox__span_first {
+          color: v.$grey300-color;
+        }
+        .checkbox__span_second {
+          color: v.$black-color;
+        }
+      }
+    }
+
+    .form__btns {
+      margin-top: 33px;
+      @include m.flex-center;
+      justify-content: flex-start;
+      column-gap: 30px;
+
+      .btn {
+        max-width: 235px;
+        width: 100%;
+        height: 58px;
+        border-radius: 10px;
+        padding: 15px 30px;
+        @include m.font-roboto;
+        border: none;
+      }
+
+      .btns__find {
+        background-color: v.$green400-color;
+        color: v.$white-color;
+      }
+      .btns__reset {
+        background-color: v.$green100-color;
+        color: v.$green400-color;
+      }
+    }
+  }
+}
