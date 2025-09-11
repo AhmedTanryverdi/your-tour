@@ -64,6 +64,9 @@
           color: v.$grey300-color;
           text-align: left;
         }
+        input[type='date']::-webkit-calendar-picker-indicator {
+          opacity: 0;
+        }
       }
     }
 
