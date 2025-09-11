@@ -35,6 +35,11 @@ function copyImages() {
   }).pipe(dest('./dist/assets'));
 }
 
+function copyFonts() {
+  return src('./src/assets/fonts/**/*.{ttf,woff,woff2}')
+    .pipe(dest('dist/assets/fonts'));
+}
+
 function favicon() {
   return src('./public/favicon.svg').pipe(dest('./dist'));
 }
@@ -68,6 +73,7 @@ const build = series(
   cleanDist,
   favicon,
   copyImages,
+  copyFonts,
   htmlCopy,
   htmlTask,
   scss,
