@@ -18,9 +18,7 @@
     }
 
     .navigation__menu {
-      @include m.flex-center;
-      column-gap: 30px;
-      margin-top: 35px;
+      @include m.flex-between;
 
       &_item {
         @include m.font-roboto(1.4375rem, 700);
@@ -46,13 +44,14 @@
     .t-1 {
       background-image: url('./assets/images/tour/tour-1.png');
       &:hover {
-        background: linear-gradient(
-          360deg,
-          rgba(0, 0, 0, 0.4) 0%,
-          rgba(0, 0, 0, 0.06) 48.44%,
-          rgba(0, 0, 0, 0.5) 100%
-        ),
-        url('./assets/images/tour/tour-1.png');;
+        background:
+          linear-gradient(
+            360deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.06) 48.44%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url('./assets/images/tour/tour-1.png');
       }
     }
     .t-2 {

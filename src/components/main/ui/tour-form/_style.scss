@@ -57,6 +57,24 @@
           font-size: 20px;
         }
 
+        #direction {
+          width: 100%;
+          height: 68px;
+          outline: none;
+          border-radius: 10px;
+          border: 1px;
+          padding: 20px;
+          margin-top: 8px;
+          background-color: v.$beige100-color;
+          font-size: 20px;
+          appearance: none;
+          background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>');
+          background-repeat: no-repeat;
+          background-position: right 20px center;
+          cursor: pointer;
+        }
+
+        #direction,
         input::placeholder,
         input[type='date'] {
           @include m.font-roboto;

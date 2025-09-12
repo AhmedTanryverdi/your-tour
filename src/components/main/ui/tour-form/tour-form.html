@@ -20,12 +20,14 @@
         </label>
         <label for="direction" class="form__info_label">
           <p class="form__info_name">Направление</p>
-          <input
-            type="text"
-            id="direction"
-            name="direction"
-            placeholder="Куда хотите ехать"
-          />
+          <select name="direction" id="direction">
+            <option value="" disabled selected hidden>
+              Выберите пункт
+            </option>
+            <option value="item-1">item-1</option>
+            <option value="item-1">item-2</option>
+            <option value="item-1">item-3</option>
+          </select>
         </label>
         <label for="email" class="form__info_label">
           <p class="form__info_name">Email</p>

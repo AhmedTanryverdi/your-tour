@@ -8,14 +8,15 @@
 
     &__content {
       max-width: 1168px;
+      width: 100%;
       height: 30px;
       @include m.flex-between;
-      column-gap: 181px;
     }
 
     &__menu {
       @include m.flex-between;
-      column-gap: 50px;
+      max-width: 468px;
+      width: 100%;
 
       &_item {
         @include m.font-roboto;
@@ -31,7 +32,10 @@
       }
     }
     &__phone {
+      max-width: 155px;
+      width: 100%;
       &_number {
+        width: 100%;
         @include m.font-roboto;
         color: v.$white-color;
       }
