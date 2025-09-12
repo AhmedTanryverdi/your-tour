@@ -5,13 +5,12 @@
   &__content {
     @include m.title-center(1170px);
     margin-top: 135px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    @include m.flex-between(column);
   }
 
   &__title {
     @include m.title-center(615px);
+    position: relative;
 
     &_value {
       @include m.font-roboto(3.6875rem, 700);
@@ -43,18 +42,18 @@
       padding: 60px;
       @include m.flex-between(column);
       align-items: flex-start;
-      transition: 0.5s;
+      transition: 0.3s;
       position: relative;
 
       &:hover {
         cursor: pointer;
-        z-index: 10;
+        z-index: 100;
         transform: scale(1.2);
 
         .images__footer {
           &_btn {
+            cursor: pointer;
             transform: scale(1.2);
-            height: 42px;
             background-color: v.$green400-color;
             border-radius: 50px;
           }
@@ -102,6 +101,7 @@
           padding: 7px 20px;
           transition: 0.5s;
           background-color: transparent;
+          margin-left: -20px;
         }
 
         &_links {
@@ -116,58 +116,47 @@
 
     .item-1 {
       background: url('./assets/images/travel-history/story-photo-1.png');
-      background-size: 100% 100%;
-
-      &:hover::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          270deg,
-          rgba(0, 0, 0, 0) 0.01%,
-          rgba(0, 0, 0, 0.2) 100%
-        );
-        border-radius: 50px;
+      &:hover {
+        background:
+          linear-gradient(
+            270deg,
+            rgba(0, 0, 0, 0) 0.01%,
+            rgba(0, 0, 0, 0.2) 100%
+          ),
+          url('./assets/images/travel-history/story-photo-1.png');
       }
     }
     .item-2 {
       background: url('./assets/images/travel-history/story-photo-2.png');
-      background-size: 100% 100%;
-
-      &:hover::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          270deg,
-          rgba(0, 0, 0, 0) 0.01%,
-          rgba(0, 0, 0, 0.2) 100%
-        );
-        border-radius: 50px;
+      &:hover {
+        background:
+          linear-gradient(
+            270deg,
+            rgba(0, 0, 0, 0) 0.01%,
+            rgba(0, 0, 0, 0.2) 100%
+          ),
+          url('./assets/images/travel-history/story-photo-2.png');
       }
     }
     .item-3 {
       background: url('./assets/images/travel-history/story-photo-3.png');
+      &:hover {
+        background:
+          linear-gradient(
+            270deg,
+            rgba(0, 0, 0, 0) 0.01%,
+            rgba(0, 0, 0, 0.2) 100%
+          ),
+          url('./assets/images/travel-history/story-photo-3.png');
+      }
+    }
+
+    .item-1,
+    .item-2,
+    .item-3 {
       background-size: 100% 100%;
-      &:hover::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          270deg,
-          rgba(0, 0, 0, 0) 0.01%,
-          rgba(0, 0, 0, 0.2) 100%
-        );
-        border-radius: 50px;
+      &:hover {
+        background-size: 100% 100%;
       }
     }
   }
