@@ -88,6 +88,10 @@
 
         .email {
           color: v.$black-color;
+
+          &:hover{
+            cursor: pointer;
+          }
         }
       }
     }

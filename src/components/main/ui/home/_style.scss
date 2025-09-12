@@ -31,7 +31,7 @@
 
         &:hover {
           text-decoration: underline;
-          text-underline-offset: 2px;
+          text-underline-offset: 6px;
           color: v.$orange200-color;
         }
       }
@@ -45,21 +45,80 @@
     gap: 30px;
     .t-1 {
       background-image: url('./assets/images/tour/tour-1.png');
+      &:hover {
+        background: linear-gradient(
+          360deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0.06) 48.44%,
+          rgba(0, 0, 0, 0.5) 100%
+        ),
+        url('./assets/images/tour/tour-1.png');;
+      }
     }
     .t-2 {
       background-image: url('./assets/images/tour/tour-2.png');
+      &:hover {
+        background:
+          linear-gradient(
+            360deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.06) 48.44%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url('./assets/images/tour/tour-2.png');
+      }
     }
     .t-3 {
       background-image: url('./assets/images/tour/tour-3.png');
+      &:hover {
+        background:
+          linear-gradient(
+            360deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.06) 48.44%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url('./assets/images/tour/tour-3.png');
+      }
     }
     .t-4 {
       background-image: url('./assets/images/tour/tour-4.png');
+      &:hover {
+        background:
+          linear-gradient(
+            360deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.06) 48.44%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url('./assets/images/tour/tour-4.png');
+      }
     }
     .t-5 {
       background-image: url('./assets/images/tour/tour-5.png');
+      &:hover {
+        background:
+          linear-gradient(
+            360deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.06) 48.44%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url('./assets/images/tour/tour-5.png');
+      }
     }
     .t-6 {
       background-image: url('./assets/images/tour/tour-6.png');
+      &:hover {
+        background:
+          linear-gradient(
+            360deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.06) 48.44%,
+            rgba(0, 0, 0, 0.5) 100%
+          ),
+          url('./assets/images/tour/tour-6.png');
+      }
     }
     .tour__card {
       max-width: 370px;
@@ -70,9 +129,11 @@
       text-align: left;
       position: relative;
       background-size: 100% 100%;
-
+      transition: 0.3s;
       &:hover {
         cursor: pointer;
+        z-index: 100;
+        transform: scale(1.2);
         .tour__card_btn {
           height: 42px;
           background-color: v.$green400-color;
@@ -109,7 +170,7 @@
         left: 30px;
         bottom: 50px;
         padding: 7px 20px;
-        transition: 0.5s;
+        transition: 0.3s;
         background-color: transparent;
       }
     }

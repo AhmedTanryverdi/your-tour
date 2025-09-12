@@ -26,7 +26,7 @@
         &:hover {
           cursor: pointer;
           text-decoration: underline;
-          text-underline-offset: 3px;
+          text-underline-offset: 6px;
         }
       }
     }
@@ -74,6 +74,20 @@
         border-radius: 10px;
         @include m.font-roboto(1.0625rem);
         color: v.$black-color;
+        outline: none;
+        border: none;
+        transition: 0.5s;
+
+        &:hover {
+          cursor: pointer;
+          background-color: v.$orange200-color;
+          color: v.$white-color;
+        }
+
+        &:active {
+          background-color: v.$orange100-color;
+          color: v.$black-color;
+        }
       }
     }
   }

@@ -137,6 +137,9 @@
           span {
             @include m.font-roboto(1.0625rem);
           }
+          .checkbox__span_second:hover {
+            cursor: pointer;
+          }
         }
 
         .checkbox__span_first {
@@ -162,15 +165,27 @@
         padding: 15px 30px;
         @include m.font-roboto;
         border: none;
+        transition: 0.5s;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       .btns__find {
         background-color: v.$green400-color;
         color: v.$white-color;
+
+        &:hover {
+          background-color: v.$green300-color;
+        }
       }
       .btns__reset {
         background-color: v.$green100-color;
         color: v.$green400-color;
+        &:hover {
+          background-color: v.$grey100-color;
+        }
       }
     }
   }
