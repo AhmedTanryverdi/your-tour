@@ -4,8 +4,7 @@
 .tour-form {
   @include m.flex-center;
   &__content {
-    max-width: 1170px;
-    width: 100%;
+    @include m.title-center(1170px);
     margin-top: 135px;
   }
 

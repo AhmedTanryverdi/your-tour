@@ -6,13 +6,11 @@
   @include m.flex-center;
 
   &__content {
-    max-width: 1170px;
-    width: 100%;
+    @include m.title-center(1170px);
     margin-top: 135px;
   }
 
   &__navigation {
-    text-align: center;
     .navigation__title {
       @include m.font-roboto(3.6875rem, 700);
       color: v.$black-color;
