@@ -19,6 +19,7 @@
 
     .navigation__menu {
       @include m.flex-between;
+      margin-top: 35px;
 
       &_item {
         @include m.font-roboto(1.4375rem, 700);
