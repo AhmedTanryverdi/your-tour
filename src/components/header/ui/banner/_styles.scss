@@ -1,0 +1,58 @@
+@use '../../../../scss/mixins' as m;
+@use '../../../../scss/variables' as v;
+
+.header {
+  .banner {
+    height: 742px;
+    @include m.flex-center;
+
+    &__content {
+      @include m.flex-center(column);
+      justify-content: center;
+      row-gap: 50px;
+    }
+
+    &__title {
+      max-width: 768px;
+      width: 100%;
+      color: v.$white-color;
+      @include m.font-roboto(6rem, 700);
+      line-height: 109%;
+      letter-spacing: 2%;
+    }
+
+    &__subtitle {
+      max-width: 562px;
+      width: 100%;
+      @include m.font-roboto;
+      color: v.$white-color;
+    }
+
+    &__btn {
+      max-width: 118px;
+      width: 100%;
+
+      &_btn {
+        width: 100%;
+        height: 34px;
+        border-radius: 10px;
+        @include m.font-roboto(1.0625rem);
+        color: v.$black-color;
+        outline: none;
+        border: none;
+        transition: 0.5s;
+
+        &:hover {
+          cursor: pointer;
+          background-color: v.$orange200-color;
+          color: v.$white-color;
+        }
+
+        &:active {
+          background-color: v.$orange100-color;
+          color: v.$black-color;
+        }
+      }
+    }
+  }
+}

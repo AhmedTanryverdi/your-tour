@@ -1,0 +1,52 @@
+@use '../../../../scss/mixins' as m;
+@use '../../../../scss/variables' as v;
+
+.footer {
+  .footer-social {
+    width: 100%;
+    height: 88px;
+    background: v.$beige200-color;
+    @include m.flex-center;
+
+    &__content {
+      max-width: 1186px;
+      width: 100%;
+      height: 28px;
+      @include m.flex-between;
+    }
+
+    &__title {
+      color: v.$grey300-color;
+      @include m.font-roboto;
+    }
+
+    &__links {
+      list-style: none;
+      @include m.flex-center;
+      column-gap: 25px;
+
+      &_item {
+        @include m.flex-between;
+        column-gap: 10px;
+        .links__icon {
+          width: 26px;
+          height: 26px;
+          cursor: pointer;
+          @include m.flex-center;
+        }
+
+        .links__name {
+          @include m.flex-center;
+          color: v.$black-color;
+          @include m.font-roboto;
+
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+          }
+        }
+      }
+    }
+  }
+}

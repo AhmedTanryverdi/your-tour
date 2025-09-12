@@ -1,0 +1,51 @@
+@use '../../../../scss/mixins' as m;
+@use '../../../../scss/variables' as v;
+
+.footer {
+  .footer-hero {
+    @include m.flex-center;
+    padding: 135px 0;
+
+    &__content {
+      max-width: 771px;
+      width: 100%;
+      min-height: 370px;
+      @include m.flex-center;
+      column-gap: 30px;
+    }
+
+    &__image {
+      max-width: 370px;
+      width: 100%;
+      min-height: 370px;
+      border-radius: 50px;
+    }
+
+    &__banner {
+      max-width: 371px;
+      width: 100%;
+
+      &_title {
+        color: v.$black-color;
+        @include m.font-roboto(2.1875rem, 500);
+        line-height: 122%;
+        text-align: left;
+      }
+
+      &_subtitle {
+        @include m.font-roboto;
+        color: v.$grey300-color;
+        text-align: left;
+        margin-top: 20px;
+
+        .email {
+          color: v.$black-color;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
