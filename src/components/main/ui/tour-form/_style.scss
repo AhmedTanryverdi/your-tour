@@ -129,6 +129,29 @@
         margin-top: 9px;
 
         .radio__value {
+          @include m.flex-center;
+          column-gap: 11px;
+
+          input[name='radio__value'] {
+            @include m.select-input;
+            border: 1px solid v.$black-color;
+            border-radius: 50%;
+
+            &::after {
+              content: '';
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background-color: v.$black-color;
+              opacity: 0;
+              transition: 300ms;
+            }
+
+            &:checked::after {
+              opacity: 1;
+            }
+          }
+
           span {
             display: inline-block;
             @include m.font-roboto;
@@ -142,9 +165,26 @@
         margin-top: 34px;
 
         input[type='checkbox'] {
-          width: 26px;
-          height: 26px;
+          @include m.select-input;
+          border: 1px solid v.$black-color;
           accent-color: transparent;
+          border-radius: 3px;
+
+          &::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background-image: url('./assets/icons/rectangle-stroke.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 300ms;
+          }
+
+          &:checked::after {
+            opacity: 1;
+          }
         }
 
         &_label {
