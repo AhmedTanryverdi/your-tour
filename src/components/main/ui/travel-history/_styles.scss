@@ -1,0 +1,174 @@
+@use '../../../../scss/mixins' as m;
+@use '../../../../scss/variables' as v;
+
+.travel-history {
+  &__content {
+    @include m.title-center(1170px);
+    margin-top: 135px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__title {
+    @include m.title-center(615px);
+
+    &_value {
+      @include m.font-roboto(3.6875rem, 700);
+      color: v.$black-color;
+      line-height: 124%;
+    }
+
+    &_subtitle {
+      @include m.font-roboto;
+      color: v.$grey300-color;
+      max-width: 418px;
+      width: 100%;
+      margin: 0px auto;
+      margin-top: 30px;
+    }
+  }
+
+  &__images {
+    @include m.title-center(1170px);
+    @include m.flex-center(column);
+    row-gap: 50px;
+    margin-top: 100px;
+    border-radius: 50px;
+
+    &_item {
+      width: 100%;
+      height: 567px;
+      border-radius: 50px;
+      padding: 60px;
+      @include m.flex-between(column);
+      align-items: flex-start;
+      transition: 0.5s;
+      position: relative;
+
+      &:hover {
+        cursor: pointer;
+        z-index: 10;
+        transform: scale(1.2);
+
+        .images__footer {
+          &_btn {
+            transform: scale(1.2);
+            height: 42px;
+            background-color: v.$green400-color;
+            border-radius: 50px;
+          }
+
+          &_btn:active {
+            background-color: v.$orange200-color;
+          }
+        }
+      }
+
+      .images__title {
+        @include m.font-roboto(2.1875rem, 500);
+        line-height: 122%;
+        color: v.$white-color;
+        text-align: left;
+      }
+
+      .images__body {
+        max-width: 564px;
+        width: 100%;
+        @include m.font-roboto;
+        color: v.$white-color;
+        text-align: left;
+        position: absolute;
+        top: 140px;
+      }
+
+      .images__body .images__body_menu {
+        margin-top: 15px;
+        margin-left: 15px;
+      }
+
+      .images__footer {
+        width: 100%;
+        @include m.flex-between;
+
+        &_btn {
+          max-width: 199px;
+          width: 100%;
+          outline: none;
+          border: none;
+          @include m.font-roboto(1.4375rem, 700);
+          line-height: 122%;
+          color: v.$white-color;
+          padding: 7px 20px;
+          transition: 0.5s;
+          background-color: transparent;
+        }
+
+        &_links {
+          @include m.flex-center;
+          list-style-type: none;
+          column-gap: 35px;
+          @include m.font-roboto;
+          color: v.$white-color;
+        }
+      }
+    }
+
+    .item-1 {
+      background: url('./assets/images/travel-history/story-photo-1.png');
+      background-size: 100% 100%;
+
+      &:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          270deg,
+          rgba(0, 0, 0, 0) 0.01%,
+          rgba(0, 0, 0, 0.2) 100%
+        );
+        border-radius: 50px;
+      }
+    }
+    .item-2 {
+      background: url('./assets/images/travel-history/story-photo-2.png');
+      background-size: 100% 100%;
+
+      &:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          270deg,
+          rgba(0, 0, 0, 0) 0.01%,
+          rgba(0, 0, 0, 0.2) 100%
+        );
+        border-radius: 50px;
+      }
+    }
+    .item-3 {
+      background: url('./assets/images/travel-history/story-photo-3.png');
+      background-size: 100% 100%;
+      &:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          270deg,
+          rgba(0, 0, 0, 0) 0.01%,
+          rgba(0, 0, 0, 0.2) 100%
+        );
+        border-radius: 50px;
+      }
+    }
+  }
+}
