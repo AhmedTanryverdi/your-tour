@@ -3,11 +3,10 @@
 
 .home {
   width: 100%;
-  @include m.flex-center;
 
   &__content {
     @include m.title-center(1170px);
-    margin-top: 135px;
+    align-items: flex-start;
   }
 
   &__navigation {
@@ -15,11 +14,13 @@
       @include m.font-roboto(3.6875rem, 700);
       color: v.$black-color;
       line-height: 124%;
+      margin: 0 auto;
     }
 
     .navigation__menu {
       @include m.flex-between;
       margin-top: 35px;
+      flex-wrap: wrap;
 
       &_item {
         @include m.font-roboto(1.4375rem, 700);
@@ -127,13 +128,14 @@
       border-radius: 50px;
       padding: 50px;
       text-align: left;
-      position: relative;
       background-size: 100% 100%;
       transition: 0.3s;
+      position: relative;
       &:hover {
         cursor: pointer;
         z-index: 100;
         transform: scale(1.2);
+        background-size: 100% 100%;
         .tour__card_btn {
           height: 42px;
           background-color: v.$green400-color;
@@ -172,6 +174,92 @@
         padding: 7px 20px;
         transition: 0.3s;
         background-color: transparent;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 360px) {
+  .home {
+    &__content {
+      @include m.title-center(100%);
+      padding: 0 53px;
+    }
+
+    &__navigation {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    &__tour {
+      width: 100%;
+      gap: 18px;
+      .tour__card {
+        max-width: 450px;
+
+        &_title {
+          max-width: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .home {
+    &__content {
+      @include m.title-center(100%);
+      padding: 0 39px;
+    }
+
+    &__navigation {
+      .navigation__title {
+        @include m.font-roboto(2.125rem, 700);
+        line-height: 112%;
+      }
+
+      .navigation__menu {
+        @include m.flex-center;
+        flex-wrap: wrap;
+        column-gap: 10px;
+
+        &_item {
+          @include m.font-roboto(1rem, 700);
+        }
+      }
+    }
+
+    &__tour {
+      margin-top: 50px;
+
+      .tour__card {
+        max-width: 318px;
+        height: 318px;
+        padding: 25px;
+
+        &_title {
+          max-width: 268px;
+          @include m.font-roboto(1.4375rem, 700);
+          line-height: 120%;
+          text-align: left;
+        }
+
+        &_price {
+          @include m.font-roboto(1rem, 700);
+          text-align: left;
+          margin-top: 13px;
+        }
+
+        &_btn {
+          max-width: 123px;
+          padding: 0;
+          @include m.font-roboto(1rem, 700);
+          left: 25px;
+          bottom: 26.5px;
+          text-align: left;
+          @include m.flex-center;
+          column-gap: 15px;
+        }
       }
     }
   }

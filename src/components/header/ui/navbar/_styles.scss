@@ -13,6 +13,13 @@
       @include m.flex-between;
     }
 
+    &__logo {
+      svg {
+        width: 182px;
+        height: 32px;
+      }
+    }
+
     &__menu {
       @include m.flex-between;
       max-width: 468px;
@@ -38,6 +45,48 @@
         width: 100%;
         @include m.font-roboto;
         color: v.$white-color;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 360px) {
+  .container {
+    max-width: 1024px;
+  }
+
+  .header {
+    .navbar {
+      &__content {
+        max-width: 910px;
+        font-size: 1rem;
+      }
+
+      &__menu {
+        max-width: 408px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    max-width: 360px;
+  }
+
+  .header {
+    .navbar {
+      &__content {
+        max-width: 320px;
+      }
+      &__logo {
+        svg {
+          width: 133px;
+        }
+      }
+
+      &__menu {
+        display: none;
       }
     }
   }

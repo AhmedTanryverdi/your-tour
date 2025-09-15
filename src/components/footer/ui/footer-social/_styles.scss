@@ -26,6 +26,10 @@
       column-gap: 25px;
 
       &_item {
+        .links__icon {
+          width: 26px;
+          height: 26px;
+        }
         @include m.flex-between;
         column-gap: 10px;
         .links__icon {
@@ -36,15 +40,55 @@
         }
 
         .links__name {
-          @include m.flex-center;
           color: v.$black-color;
           @include m.font-roboto;
 
           &:hover {
             cursor: pointer;
             text-decoration: underline;
-            text-underline-offset: 2px;
+            text-underline-offset: 6px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 360px) {
+  .footer {
+    width: 100%;
+    .footer-social {
+      height: 98px;
+
+      &__content {
+        max-width: 918px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .footer {
+    width: 100%;
+    .footer-social {
+      height: 98px;
+
+      &__content {
+        max-width: 317px;
+        height: 56px;
+        @include m.flex-center(column);
+        row-gap: 7px;
+      }
+
+      &__title {
+        font-size: 1rem;
+      }
+
+      &__links {
+        column-gap: 15px;
+
+        .links__name {
+          font-size: 1rem;
         }
       }
     }

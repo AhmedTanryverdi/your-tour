@@ -3,7 +3,7 @@
 
 .header {
   .banner {
-    height: 742px;
+    min-height: 742px;
     @include m.flex-center;
 
     &__content {
@@ -52,6 +52,38 @@
           background-color: v.$orange100-color;
           color: v.$black-color;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 360px) {
+  .header {
+    .banner {
+      &__subtitle {
+        max-width: 442px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header {
+    .banner {
+      &__content {
+        row-gap: 40px;
+        margin-top: 52px;
+      }
+
+      &__title {
+        @include m.font-roboto(2.125rem, 700);
+        line-height: 112%;
+        margin-top: 52px;
+      }
+
+      &__subtitle {
+        max-width: 310px;
+        font-size: 1rem;
       }
     }
   }

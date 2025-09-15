@@ -2,4 +2,30 @@
 
 .main {
   width: 100%;
+  margin-top: 135px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 135px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 360px) {
+  .main {
+    .container {
+      max-width: 1024px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .main {
+    margin-top: 75px;
+    .container {
+      row-gap: 75px;
+      max-width: 360px;
+    }
+  }
 }

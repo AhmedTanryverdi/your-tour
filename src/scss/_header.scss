@@ -3,7 +3,21 @@
 
 .header {
   width: 100%;
-  height: 830px;
+  min-height: 830px;
   background-image: url(g.$header-bg-path);
-  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 360px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container {
+    max-width: 360px;
+  }
 }

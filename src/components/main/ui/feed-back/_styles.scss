@@ -6,14 +6,13 @@
 
   &__content {
     @include m.title-center(1170px);
-    margin-top: 65px;
   }
 
   &__title {
     max-width: 528px;
     width: 100%;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
 
     &_value {
       @include m.font-roboto(3.6875rem, 700);
@@ -31,6 +30,7 @@
   &__cards {
     @include m.flex-between;
     align-items: flex-start;
+    margin: 0 auto;
     margin-top: 100px;
 
     &_item {
@@ -77,6 +77,83 @@
           width: 100%;
           min-height: 75px;
           border-radius: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 360px) {
+  .feed-back {
+    &__content {
+      max-width: 100%;
+      padding: 0 53px;
+    }
+
+    &__title {
+      max-width: 529px;
+    }
+
+    &__cards {
+      column-gap: 18px;
+
+      &_item {
+        max-width: 450px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .feed-back {
+    &__content {
+      max-width: 100%;
+      padding: 0 21px;
+    }
+
+    &__title {
+      max-width: 318px;
+      margin: 0 auto;
+      text-align: center;
+
+      &_value {
+        @include m.font-roboto(2.125rem, 700);
+        line-height: 112%;
+      }
+
+      &_subtitle {
+        font-size: 1rem;
+        margin-top: 20px;
+      }
+    }
+
+    &__cards {
+      @include m.flex-center(column);
+      row-gap: 18px;
+      margin-top: 50px;
+
+      &_item {
+        max-width: 318px;
+        padding: 20px;
+        border-radius: 20px;
+
+        .cards__review {
+          @include m.font-roboto(1rem, 700);
+          text-align: left;
+        }
+
+        .cards__label {
+          &_data {
+            .name {
+              @include m.font-roboto(1.4375rem, 700);
+              line-height: 120%;
+              text-align: left;
+              letter-spacing: 4%;
+            }
+            .value {
+              font-size: 1rem;
+            }
+          }
         }
       }
     }

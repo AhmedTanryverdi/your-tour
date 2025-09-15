@@ -1,2 +1,7 @@
+@use '../../scss/mixins' as m;
+@use '../../scss/variables' as v;
+
 @use './ui/banner/styles' as banner;
 @use './ui/navbar/styles' as navbar;
+
+

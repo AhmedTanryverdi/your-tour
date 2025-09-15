@@ -2,9 +2,9 @@
 @use '../../../../scss/variables' as v;
 
 .travel-history {
+  width: 100%;
   &__content {
     @include m.title-center(1170px);
-    margin-top: 135px;
     @include m.flex-between(column);
   }
 
@@ -36,6 +36,7 @@
     border-radius: 50px;
 
     &_item {
+      max-width: 1170px;
       width: 100%;
       height: 567px;
       border-radius: 50px;
@@ -49,7 +50,7 @@
         cursor: pointer;
         z-index: 100;
         transform: scale(1.2);
-
+        max-width: 100%;
         .images__footer {
           &_btn {
             cursor: pointer;
@@ -155,8 +156,107 @@
     .item-2,
     .item-3 {
       background-size: 100% 100%;
+      background-repeat: no-repeat;
       &:hover {
-        background-size: 100% 100%;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 360px) {
+  .travel-history {
+    width: 100%;
+
+    &__content {
+      max-width: 100%;
+      padding: 0 53px;
+    }
+
+    &__images {
+      max-width: 918px;
+      &_item {
+        .images__footer {
+          &_btn {
+            @include m.flex-center;
+            column-gap: 15px;
+            max-width: 159px;
+            height: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .travel-history {
+    &__content {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    &__title {
+      max-width: 319px;
+
+      &_value {
+        font-size: 2.125rem;
+      }
+
+      &_subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    &__images {
+      max-width: 318px;
+      row-gap: 20px;
+      margin-top: 50px;
+
+      &_item {
+        height: 455px;
+        border-radius: 20px;
+        padding: 30px;
+
+        &:hover {
+          .images__footer {
+            &_btn {
+              border-radius: 20px;
+            }
+
+            &_btn:active {
+              background-color: v.$orange200-color;
+            }
+          }
+        }
+
+        .images__title {
+          @include m.font-roboto(1.4375rem, 700);
+          line-height: 120%;
+        }
+
+        .images__body {
+          max-width: 263px;
+          font-size: 1rem;
+          top: 106px;
+        }
+
+        .images__footer {
+          &_btn {
+            max-width: 123px;
+            height: 26px;
+            font-size: 1rem;
+            line-height: 142%;
+            padding: 0;
+            @include m.flex-center;
+            column-gap: 15px;
+          }
+
+          &_links {
+            display: none;
+          }
+        }
       }
     }
   }
