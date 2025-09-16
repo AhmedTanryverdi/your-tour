@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "set NODE_ENV=development&& gulp dev",
     "prod": "set NODE_ENV=production&& gulp prod",
-    "start": "gulp",
-    "build": "gulp build"
+    "start": "npx serve -s dist",
+    "build": "gulp prod"
   },
   "keywords": [],
   "author": "",
@@ -28,5 +28,8 @@
     "imagemin-svgo": "^11.0.1",
     "prettier": "^3.6.2",
     "sass": "^1.92.1"
+  },
+  "dependencies": {
+    "serve": "^14.2.5"
   }
 }
