@@ -6,7 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <meta name="keywords" content="путешествия, туры, отдых" />
+    <meta
+      name="keywords"
+      content="путешествия, туры, отдых"
+    />
     <link
       rel="icon"
       href="favicon.svg?v=1"
@@ -21,5 +24,41 @@
       @@include('./components/main/main.html')
       @@include('./components/footer/footer.html')
     </div>
+
+    <script>
+      const selectElement =
+        document.querySelector('#direction');
+      if (!selectElement)
+        throw new Error(
+          "Элемент '#direction' не найден в DOM"
+        );
+
+      Array.from(selectElement.options).forEach(option => {
+        option.style.color = '#1B1F2B';
+      });
+
+      selectElement.addEventListener('change', function () {
+        if (selectElement.value !== '') {
+          selectElement.style.color = '#1B1F2B';
+        }
+      });
+
+      const navbarElement =
+        document.querySelector('.navbar');
+      if (!navbarElement)
+        throw new Error(
+          "Элемент '.navbar' не найден в DOM"
+        );
+
+      window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+
+        if (scrollPosition > 450) {
+          navbarElement.classList.add('navbar__fixed');
+        } else {
+          navbarElement.classList.remove('navbar__fixed');
+        }
+      });
+    </script>
   </body>
 </html>
