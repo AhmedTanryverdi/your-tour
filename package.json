@@ -6,7 +6,7 @@
     "dev": "set NODE_ENV=development&& gulp dev",
     "prod": "set NODE_ENV=production&& gulp prod",
     "start": "npx serve -s dist",
-    "build": "gulp prod"
+    "build": "NODE_ENV=production gulp prod"
   },
   "keywords": [],
   "author": "",
