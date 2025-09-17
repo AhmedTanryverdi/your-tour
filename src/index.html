@@ -54,9 +54,17 @@
         const scrollPosition = window.scrollY;
 
         if (scrollPosition > 450) {
-          navbarElement.classList.add('navbar__fixed');
+          navbarElement.classList.add('fixed__navbar');
+          if (window.innerWidth > 1024) {
+            navbarElement.nextElementSibling.style.display =
+              'block';
+          }
         } else {
-          navbarElement.classList.remove('navbar__fixed');
+          navbarElement.classList.remove('fixed__navbar');
+          if (window.innerWidth > 1024) {
+            navbarElement.nextElementSibling.style.display =
+              'none';
+          }
         }
       });
     </script>
