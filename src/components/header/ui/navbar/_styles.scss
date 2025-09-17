@@ -17,6 +17,7 @@
       svg {
         width: 182px;
         height: 32px;
+        fill: v.$white-color;
       }
     }
 
@@ -47,6 +48,40 @@
         color: v.$white-color;
       }
     }
+  }
+  .navbar__fixed {
+    width: 100%;
+    height: 88px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 100;
+    @include m.flex-center;
+    .navbar__content {
+      max-width: 1168px;
+      width: 100%;
+      height: 30px;
+      @include m.flex-between;
+    }
+
+    .navbar__logo {
+      svg {
+        fill: v.$black-color;
+      }
+    }
+    .navbar__menu {
+      &_item {
+        color: v.$black-color;
+      }
+    }
+
+    .navbar__phone {
+      span {
+        color: v.$black-color;
+      }
+    }
+
+    background: rgba(243, 239, 232, 0.6);
+    backdrop-filter: blur(27px);
   }
 }
 
