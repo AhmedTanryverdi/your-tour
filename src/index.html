@@ -68,16 +68,10 @@
 
         if (scrollPosition > 450) {
           navbarElement.classList.add('fixed__navbar');
-          if (window.innerWidth > 1024) {
-            navbarElement.nextElementSibling.style.display =
-              'block';
-          }
+          document.body.style.paddingTop = '88px';
         } else {
           navbarElement.classList.remove('fixed__navbar');
-          if (window.innerWidth > 1024) {
-            navbarElement.nextElementSibling.style.display =
-              'none';
-          }
+          document.body.style.paddingTop = '0';
         }
       });
     </script>
