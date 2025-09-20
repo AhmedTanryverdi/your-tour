@@ -15,22 +15,24 @@ html {
   font-size: 16px;
 }
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('./assets/fonts/roboto/Roboto-Italic-VariableFont_wdth,wght.ttf')
-    format('typetrue');
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-}
+body {
+  @font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/roboto/Roboto-Italic-VariableFont_wdth,wght.ttf')
+      format('typetrue');
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'Roboto';
-  src: url('./assets/fonts/roboto/Roboto-VariableFont_wdth,wght.ttf')
-    format('typetrue');
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
+  @font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/roboto/Roboto-VariableFont_wdth,wght.ttf')
+      format('typetrue');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+  }
 }
 
 * {
