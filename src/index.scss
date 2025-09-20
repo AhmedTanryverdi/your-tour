@@ -3,6 +3,7 @@
 @use './scss/header';
 @use './scss/main';
 @use './scss/footer';
+@use './components/fixed-block/style';
 
 * {
   box-sizing: border-box;
@@ -40,7 +41,6 @@ html {
 .root {
   width: 100%;
   min-height: 100vh;
-  @include m.flex-between(column);
 }
 
 .container {
