@@ -1,8 +1,7 @@
 @use './scss/mixins' as m;
-@use './scss/variables';
-@use './scss/header';
-@use './scss/main';
-@use './scss/footer';
+@use './components/header/styles';
+@use './components/main/styles';
+@use './components/footer/styles';
 @use './components/fixed-block/style';
 
 * {
