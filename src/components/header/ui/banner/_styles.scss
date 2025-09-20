@@ -3,22 +3,23 @@
 
 .header {
   .banner {
-    min-height: 742px;
+    height: 742px;
     @include m.flex-center;
 
     &__content {
+      max-width: 768px;
+      width: 100%;
       @include m.flex-center(column);
       justify-content: center;
       row-gap: 50px;
     }
 
     &__title {
-      max-width: 768px;
-      width: 100%;
+      height: 315px;
       color: v.$white-color;
       @include m.font-roboto(6rem, 700);
       line-height: 109%;
-      letter-spacing: 2%;
+      letter-spacing: 0.02em;
     }
 
     &__subtitle {
@@ -62,6 +63,7 @@
     .banner {
       &__subtitle {
         max-width: 442px;
+        padding: 2px 22px;
       }
     }
   }
@@ -70,15 +72,16 @@
 @media screen and (max-width: 360px) {
   .header {
     .banner {
+      height: 400px;
       &__content {
         row-gap: 40px;
-        margin-top: 52px;
+        margin-top: 5px;
       }
 
       &__title {
+        height: 114px;
         @include m.font-roboto(2.125rem, 700);
         line-height: 112%;
-        margin-top: 52px;
       }
 
       &__subtitle {

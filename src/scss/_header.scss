@@ -3,21 +3,24 @@
 
 .header {
   width: 100%;
-  min-height: 830px;
-  background-image: url(g.$header-bg-path);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-}
+  background-size: cover;
 
-@media screen and (max-width: 1024px) {
   .container {
-    max-width: 1024px;
+    background-image: url(g.$header-bg-path);
   }
-}
 
-@media screen and (max-width: 360px) {
-  .container {
-    max-width: 360px;
+  @media screen and (max-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .container {
+      height: 488px;
+      max-width: 360px;
+    }
   }
 }

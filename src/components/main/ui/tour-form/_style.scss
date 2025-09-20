@@ -24,13 +24,15 @@
       color: v.$grey300-color;
       max-width: 418px;
       height: 56px;
-      margin: 30px auto;
+      margin: 0px auto;
+      margin-top: 30px;
     }
   }
 
   &__form {
     margin-top: 100px;
-    padding: 0 70px;
+    padding: 70px;
+    border-radius: 50px;
     background-color: v.$white-color;
 
     .form__info {
@@ -44,7 +46,6 @@
         color: v.$black-color;
         text-align: left;
       }
-
       &_label {
         max-width: 500px;
         width: 100%;
@@ -71,19 +72,19 @@
           background-color: v.$beige100-color;
           font-size: 20px;
           appearance: none;
-          background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>');
+          background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 26 26"><path d="M6 9l6 6 6-6"/></svg>');
           background-repeat: no-repeat;
           background-position: right 20px center;
           cursor: pointer;
         }
 
         #direction,
-        input::placeholder,
-        input[type='date'] {
+        input::placeholder {
           @include m.font-roboto;
           color: v.$grey300-color;
           text-align: left;
         }
+
         input[type='date']::-webkit-calendar-picker-indicator {
           opacity: 0;
         }
@@ -119,7 +120,8 @@
 
     .form__filter {
       &_label {
-        margin-top: 33px;
+        height: 28px;
+        margin-top: 30px;
         @include m.font-roboto;
         color: v.$black-color;
         text-align: left;
@@ -129,11 +131,10 @@
         @include m.flex-center;
         justify-content: flex-start;
         column-gap: 31px;
-        margin-top: 9px;
+        margin-top: 8px;
 
         .radio__label {
           @include m.flex-center;
-          column-gap: 11px;
 
           input[name='radio__label'] {
             @include m.select-input;
@@ -165,7 +166,7 @@
       }
 
       .filter__checkbox {
-        margin-top: 34px;
+        margin-top: 33px;
 
         input[type='checkbox'] {
           @include m.select-input;
@@ -253,8 +254,32 @@
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .tour-form {
+    margin-top: -5px;
+    padding: 0 53px;
+    &__title {
+      max-width: 470px;
+      .title__value {
+        margin-left: 12px;
+      }
+
+      .title__subtitle {
+        max-width: 418px;
+        height: 56px;
+        padding: 0 5px;
+      }
+    }
+
+    &__form {
+      padding: 60px;
+    }
+  }
+}
+
 @media screen and (max-width: 360px) {
   .tour-form {
+    padding: 0;
     &__content {
       @include m.title-center(100%);
       padding: 0 21px;
@@ -262,20 +287,32 @@
 
     &__title {
       max-width: 318px;
+      width: 100%;
+      margin: 0 auto;
 
       .title__value {
+        width: 100%;
+        height: 38px;
+        margin-top: 4px;
+        margin-left: 4px;
         @include m.font-roboto(2.125rem, 700);
         line-height: 112%;
+        letter-spacing: 0.02em;
       }
 
       .title__subtitle {
+        width: 100%;
+        padding: 0;
+        margin-top: 20px;
         @include m.font-roboto(1rem, 400);
       }
     }
 
     &__form {
-      margin-top: 60px;
+      margin-top: 35px;
       padding: 20px;
+      border-radius: 10px;
+
       .form__info {
         @include m.flex-center(column);
         row-gap: 30px;
@@ -287,12 +324,21 @@
 
         &_label {
           input {
+            max-width: 278px;
+            width: 100%;
             height: 43px;
             padding: 10px;
+          }
+
+          input::placeholder {
+            height: 23px;
             font-size: 1rem;
           }
-          input::placeholder {
-            font-size: 1rem;
+
+          #direction {
+            height: 43px;
+            padding: 10px;
+            background-position: right 10px center;
           }
         }
       }
@@ -324,8 +370,7 @@
           column-gap: 30px;
 
           .radio__label {
-            column-gap: 10px;
-
+            margin-top: -4px;
             input[name='radio__label'] {
               width: 20px;
               height: 20px;
@@ -355,13 +400,15 @@
       }
 
       .form__btns {
-        margin-top: 30px;
+        margin: 0 auto;
+        margin-top: 25px;
         column-gap: 10px;
 
         .btn {
           max-width: 134px;
           height: 47px;
           font-size: 1rem;
+          padding: 0;
         }
       }
     }

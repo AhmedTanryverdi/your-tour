@@ -18,8 +18,11 @@
     }
 
     .navigation__menu {
-      @include m.flex-between;
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto;
       margin-top: 35px;
+      @include m.flex-between;
       flex-wrap: wrap;
 
       &_item {
@@ -27,19 +30,24 @@
         color: v.$black-color;
         line-height: 122%;
         text-decoration: transparent;
-        transition: 0.3s;
+        position: relative;
+      }
 
-        &:hover {
-          text-decoration: underline;
-          text-underline-offset: 6px;
-          color: v.$orange200-color;
-        }
+      &_item:hover::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: calc(100% + 6px);
+        max-width: 137px;
+        width: 100%;
+        height: 2px;
+        background-color: v.$orange200-color;
       }
     }
   }
 
   &__tour {
-    margin-top: 100px;
+    margin-top: 105px;
     @include m.flex-center;
     flex-wrap: wrap;
     gap: 30px;
@@ -131,20 +139,23 @@
       background-size: 100% 100%;
       transition: 0.3s;
       position: relative;
+
       &:hover {
         cursor: pointer;
         z-index: 100;
         transform: scale(1.2);
         background-size: 100% 100%;
+
         .tour__card_btn {
+          max-width: 199px;
           height: 42px;
-          background-color: v.$green400-color;
           border-radius: 50px;
+          background-color: v.$green400-color;
         }
       }
 
       &_title {
-        max-width: 200px;
+        max-width: 240px;
         width: 100%;
         @include m.font-roboto(2.1875rem, 500);
         line-height: 122%;
@@ -160,8 +171,9 @@
       }
 
       &_btn {
-        max-width: 199px;
+        max-width: 159px;
         width: 100%;
+        height: 28px;
         background-color: transparent;
         outline: none;
         border: none;
@@ -169,11 +181,11 @@
         line-height: 122%;
         color: v.$white-color;
         position: absolute;
-        left: 30px;
+        left: 50px;
         bottom: 50px;
-        padding: 7px 20px;
         transition: 0.3s;
-        background-color: transparent;
+        @include m.flex-center;
+        column-gap: 15px;
       }
     }
   }
@@ -186,17 +198,25 @@
       padding: 0 53px;
     }
 
+    .navigation__title {
+      margin-left: 15px;
+    }
+
     &__navigation {
       max-width: 700px;
       margin: 0 auto;
+      .navigation__menu {
+        margin-left: 5px;
+      }
     }
 
     &__tour {
       width: 100%;
       gap: 18px;
+      padding-top: 5px;
       .tour__card {
         max-width: 450px;
-
+        height: 531px;
         &_title {
           max-width: 350px;
         }
@@ -208,12 +228,16 @@
 @media screen and (max-width: 360px) {
   .home {
     &__content {
+      width: 100%;
       @include m.title-center(100%);
-      padding: 0 39px;
+      padding: 0 21px;
     }
 
     &__navigation {
       .navigation__title {
+        max-width: 282px;
+        width: 100%;
+        margin: 0 auto;
         @include m.font-roboto(2.125rem, 700);
         line-height: 112%;
       }
@@ -221,8 +245,7 @@
       .navigation__menu {
         @include m.flex-center;
         flex-wrap: wrap;
-        column-gap: 10px;
-
+        gap: 10px;
         &_item {
           @include m.font-roboto(1rem, 700);
         }
@@ -230,12 +253,12 @@
     }
 
     &__tour {
-      margin-top: 50px;
-
+      margin-top: 40px;
       .tour__card {
         max-width: 318px;
         height: 318px;
         padding: 25px;
+        border-radius: 10px;
 
         &_title {
           max-width: 268px;
@@ -255,10 +278,10 @@
           padding: 0;
           @include m.font-roboto(1rem, 700);
           left: 25px;
-          bottom: 26.5px;
+          bottom: 21px;
           text-align: left;
           @include m.flex-center;
-          column-gap: 15px;
+          column-gap: 16px;
         }
       }
     }

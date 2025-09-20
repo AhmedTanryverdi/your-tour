@@ -5,6 +5,7 @@
   .footer-social {
     width: 100%;
     height: 88px;
+    margin-top: 135px;
     background: v.$beige200-color;
     @include m.flex-center;
 
@@ -18,18 +19,21 @@
     &__title {
       color: v.$grey300-color;
       @include m.font-roboto;
+      margin-left: 5px;
+      margin-top: -2px;
     }
 
     &__links {
       list-style: none;
       @include m.flex-center;
-      column-gap: 25px;
+      column-gap: 30px;
 
       &_item {
         .links__icon {
           width: 26px;
           height: 26px;
         }
+
         @include m.flex-between;
         column-gap: 10px;
         .links__icon {
@@ -42,7 +46,6 @@
         .links__name {
           color: v.$black-color;
           @include m.font-roboto;
-
           &:hover {
             cursor: pointer;
             text-decoration: underline;
@@ -57,9 +60,9 @@
 @media screen and (max-width: 1024px) {
   .footer {
     width: 100%;
+
     .footer-social {
       height: 98px;
-
       &__content {
         max-width: 918px;
       }
@@ -72,12 +75,12 @@
     width: 100%;
     .footer-social {
       height: 98px;
+      margin-top: 70px;
 
       &__content {
         max-width: 317px;
         height: 56px;
         @include m.flex-center(column);
-        row-gap: 7px;
       }
 
       &__title {
@@ -85,6 +88,7 @@
       }
 
       &__links {
+        margin-top: 5px;
         column-gap: 15px;
 
         .links__name {

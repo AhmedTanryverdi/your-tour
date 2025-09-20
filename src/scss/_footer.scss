@@ -2,18 +2,16 @@
 
 .footer {
   width: 100%;
+  margin-top: 135px;
 
   .content {
     display: flex;
     flex-direction: column;
-    row-gap: 135px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .footer {
-    margin-top: 135px;
-
     .container {
       max-width: 1024px;
     }
@@ -23,9 +21,5 @@
 @media screen and (max-width: 360px) {
   .footer {
     margin-top: 75px;
-
-    .content {
-      row-gap: 75px;
-    }
   }
 }

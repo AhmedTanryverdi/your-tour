@@ -11,19 +11,21 @@
   &__title {
     max-width: 528px;
     width: 100%;
-    text-align: center;
     margin: 0 auto;
+    @include m.flex-center(column);
 
     &_value {
       @include m.font-roboto(3.6875rem, 700);
       color: v.$black-color;
       line-height: 124%;
     }
-
     &_subtitle {
+      max-width: 418px;
+      width: 100%;
+      padding: 0 5px;
       @include m.font-roboto;
       color: v.$grey300-color;
-      margin-top: 30px;
+      margin-top: 25px;
     }
   }
 
@@ -31,7 +33,7 @@
     @include m.flex-between;
     align-items: flex-start;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 103px;
 
     &_item {
       max-width: 570px;
@@ -39,7 +41,7 @@
       padding: 40px;
       border-radius: 50px;
       background-color: v.$beige200-color;
-      min-height: 673px;
+      height: 673px;
       @include m.flex-between(column);
 
       .cards__review {
@@ -49,7 +51,7 @@
         text-align: left;
         display: flex;
         flex-direction: column;
-        row-gap: 20px;
+        row-gap: 25px;
       }
 
       .cards__label {
@@ -69,6 +71,12 @@
             @include m.font-roboto(1.0625);
             color: v.$grey300-color;
             margin-top: 8px;
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 142%;
+            letter-spacing: -0.01em;
           }
         }
 
@@ -99,6 +107,7 @@
 
       &_item {
         max-width: 450px;
+        height: 841px;
       }
     }
   }
@@ -114,6 +123,7 @@
     &__title {
       max-width: 318px;
       margin: 0 auto;
+      margin-top: 20px;
       text-align: center;
 
       &_value {
@@ -122,6 +132,8 @@
       }
 
       &_subtitle {
+        padding: 0;
+        margin: 0 auto;
         font-size: 1rem;
         margin-top: 20px;
       }
@@ -134,15 +146,24 @@
 
       &_item {
         max-width: 318px;
+        height: auto;
         padding: 20px;
         border-radius: 20px;
+
+        &:first-child {
+          height: 408px;
+        }
 
         .cards__review {
           @include m.font-roboto(1rem, 700);
           text-align: left;
+          border: 1px solid transparent;
         }
 
         .cards__label {
+          height: 115px;
+          display: flex;
+          align-items: flex-end;
           &_data {
             .name {
               @include m.font-roboto(1.4375rem, 700);
