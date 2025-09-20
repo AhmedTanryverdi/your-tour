@@ -4,4 +4,26 @@
 @use './ui/banner/styles' as banner;
 @use './ui/navbar/styles' as navbar;
 
+.header {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
+  .container {
+    background-image: url(g.$header-bg-path);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .container {
+      height: 488px;
+      max-width: 360px;
+    }
+  }
+}

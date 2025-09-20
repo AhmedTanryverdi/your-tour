@@ -3,3 +3,31 @@
 @use './ui/feed-back/styles' as feed_back;
 @use './ui/photo-gallery/styles' as photo-gallery;
 @use './ui/travel-history/styles' as travel-history;
+
+.main {
+  width: 100%;
+  margin-top: 135px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 135px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    .container {
+      max-width: 1024px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .main {
+    margin-top: 75px;
+    .container {
+      row-gap: 75px;
+      max-width: 360px;
+    }
+  }
+}
