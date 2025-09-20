@@ -1,0 +1,115 @@
+@use '../../scss/mixins' as m;
+@use '../../scss/variables' as v;
+
+.fixed-block {
+  width: 100%;
+  height: 88px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  @include m.flex-center;
+  opacity: 0;
+  transition: 0.3s;
+
+  &__content {
+    max-width: 1168px;
+    width: 100%;
+    height: 30px;
+    @include m.flex-between;
+  }
+
+  &__logo {
+    svg {
+      max-width: 182px;
+      width: 100%;
+      height: 32px;
+      fill: v.$black-color;
+      margin-top: 5px;
+    }
+  }
+
+  &__menu {
+    max-width: 468px;
+    width: 100%;
+    @include m.flex-center;
+    column-gap: 50px;
+
+    &_item {
+      @include m.font-roboto;
+      color: v.$black-color;
+      text-decoration: transparent;
+      transition: 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+      }
+    }
+  }
+
+  &__phone {
+    max-width: 155px;
+    width: 100%;
+    &_number {
+      width: 100%;
+      @include m.font-roboto;
+      fill: v.$black-color;
+    }
+  }
+
+  background: rgba(243, 239, 232, 0.6);
+  backdrop-filter: blur(27px);
+
+  @media screen and (max-width: 1024px) {
+    .contaner {
+      max-width: 1024px;
+    }
+
+    .fixed-block {
+      &__content {
+        padding: 28.88px 57px;
+      }
+
+      &__menu {
+        column-gap: 30px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .contaner {
+      max-width: 360px;
+    }
+
+    .fixed-block {
+      @include m.flex-center;
+      &__content {
+        max-width: 320px;
+        width: 100%;
+        height: 28px;
+        padding: 0;
+      }
+
+      &__logo {
+        svg {
+          width: 133px;
+        }
+      }
+
+      &__menu {
+        display: none;
+      }
+
+      &__phone {
+        width: 100%;
+        &_number {
+          font-size: 1rem;
+          letter-spacing: 0.01em;
+        }
+      }
+    }
+  }
+}
