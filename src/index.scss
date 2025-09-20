@@ -1,8 +1,8 @@
 @use './scss/mixins' as m;
-@use './components/header/styles';
-@use './components/main/styles';
-@use './components/footer/styles';
-@use './components/fixed-block/style';
+@use './components/header/styles' as header;
+@use './components/main/styles' as main;
+@use './components/footer/styles' as footer;
+@use './components/fixed-block/style' as fixedBlock;
 
 * {
   box-sizing: border-box;
