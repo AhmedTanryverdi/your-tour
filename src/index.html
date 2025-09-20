@@ -36,6 +36,7 @@
       @@include('./components/header/header.html')
       @@include('./components/main/main.html')
       @@include('./components/footer/footer.html')
+      @@include('./components/fixed-block/fixed-block.html')
     </div>
 
     <script>
@@ -56,22 +57,20 @@
         }
       });
 
-      const navbarElement =
-        document.querySelector('.navbar');
-      if (!navbarElement)
+      const fixedElement =
+        document.querySelector('.fixed-block');
+      if (!fixedElement)
         throw new Error(
-          "Элемент '.navbar' не найден в DOM"
+          "Элемент '.fixed-block' не найден в DOM"
         );
 
       window.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY;
 
         if (scrollPosition > 450) {
-          navbarElement.classList.add('fixed__navbar');
-          document.body.style.paddingTop = '88px';
+          fixedElement.style.opacity = 1;
         } else {
-          navbarElement.classList.remove('fixed__navbar');
-          document.body.style.paddingTop = '0';
+          fixedElement.style.opacity = 0;
         }
       });
     </script>
